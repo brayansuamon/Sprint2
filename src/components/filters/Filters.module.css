@@ -1,0 +1,25 @@
+.titulo {
+  color: blue;
+}
+
+.filters {
+  width: 100%;
+  background-color: rgb(71, 111, 243);
+  height: 70px;
+}
+
+.button {
+  background: red;
+  border-radius: 5px;
+}
+.contenedor {
+  background-color: blue;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+.select {
+  background-color: red;
+}

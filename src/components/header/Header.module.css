@@ -1,0 +1,13 @@
+.titulo {
+  color: orange;
+}
+.header {
+  width: 100%;
+  margin: 0 auto;
+  background-color: cyan;
+  height: 200px;
+  color: white;
+}
+.texto {
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+.titulo {
+  color: green;
+}
+.card {
+  width: 30%;
+  border: 1px solid;
+  height: 300px;
+  margin-bottom: 50px;
+}
