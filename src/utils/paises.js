@@ -1,10 +1,18 @@
- 
+import { useContext } from "react";
+import {Appcontext} from "../context/Appcontext"
+
+
  const filtrarPaises = (evento,hotelsData) => {
-    console.log(evento.target.value);
+
+
+  const {data} = useContext(Appcontext);
+  
+  console.log(evento.target.value);
     let hotelesFiltrados = hotelsData;
 
     switch (evento.target.value) {
       case "argentina":
+
         hotelesFiltrados = hotelsData.filter((hotel) => {
           if (hotel.country === "Argentina") {
             return true;

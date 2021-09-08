@@ -1,4 +1,7 @@
-import react, { useState } from "react";
+import react, { useState,useContext } from "react";
+//Importamos el context que creamos
+import Appcontext from "../../context/Appcontext";
+
 import styles from "./Filters.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -7,16 +10,20 @@ import Cards from "../cards/Cards";
 //Importamos la funcion de paises utils
 import filtrarPaises from "../../utils/paises"
 
+
 export function Filters() {
+
+const {data} = useContext(Appcontext);
+console.log(data);
+
 
   const limpiar = (limpia) => {
     console.log("Limpiar Consola");
-    hotelesFiltrados = hotelsData;
-    return hotelesFiltrados;
+   // hotelesFiltrados = hotelsData;
+    return data;
   };
-
  
-  const ofertas = (oferta) => {
+const ofertas = (oferta) => {
     console.log(oferta.target.value);
     switch (oferta.target.value) {
       case "$":
@@ -69,9 +76,9 @@ export function Filters() {
   let hastaUNIX = DS_hasta.getTime();
 
   //Vamos a Crear un for para mostrar la disponibilidad
-  let hotelesFiltrados = hotelsData;
+  //let hotelesFiltrados = data;
   if (desde !== "" && hasta !== "") {
-    hotelesFiltrados = hotelsData.filter((hotel) => {
+     data.filter((hotel) => {
       if (
         hotel.availabilityFrom <= desdeUNIX &&
         hotel.availabilityTo >= hastaUNIX
