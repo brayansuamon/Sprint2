@@ -1,11 +1,18 @@
-import react from "react";
+import react,{useContext} from "react";
 import styles from "./Cards.module.css";
 import Card from "../card/Card";
+import Appcontext from "../../context/Appcontext"
 
-function Cards({ hotelsData }) {
+
+
+
+function Cards() {
+
+  const {data} = useContext(Appcontext);
+
   return (
     <main className={styles.cards}>
-      {hotelsData.map((hotel) => {
+      {data.map((hotel) => {
         return <Card className={styles.card} key={hotel.slug} hotel={hotel} />;
       })}
     </main>
